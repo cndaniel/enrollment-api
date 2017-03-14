@@ -1,8 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "Teachers", type: :request do
+RSpec.describe "list all Teachers", type: :request do
+  teacher = FactoryGirl.create(:teacher)
   describe "GET /teachers" do
-    teacher = FactoryGirl.create(:teacher)
+
 
     c1 = FactoryGirl.create(:course, teacher:teacher )
     c2 = FactoryGirl.create(:course, name:'GH', teacher: teacher)
@@ -24,4 +25,18 @@ RSpec.describe "Teachers", type: :request do
         )
     end
   end
+
+      describe "DELETE /teachers/id" do
+
+        before do
+          delete "/teachers/#{teacher.id}"
+        end
+
+        it 'returns http no content' do
+          expect(response).to have_http_status(204)
+        end
+
+
+
+      end
 end

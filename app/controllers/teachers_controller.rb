@@ -13,6 +13,7 @@ class TeachersController < ApplicationController
   # DELETE /teachers/1
   def destroy
     @teacher.destroy
+    head 204
   end
 
   private
