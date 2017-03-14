@@ -19,6 +19,7 @@ a TA-reference solution for fullstack job question 2
 
 
 ## Installation
+```
    $git clone git@github.com:cndaniel/enrollment-api.git
    $cd enrollment-api
 
@@ -26,6 +27,7 @@ a TA-reference solution for fullstack job question 2
    $ bundle exec rake db:create
    $ bundle exec rake db:migrate
    $ bundle exec rspec --format documentation
+```
 
 
  2017
