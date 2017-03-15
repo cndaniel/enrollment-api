@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-
-  resources :students,only: :show
-  resources :teachers, only: [:index,:destroy]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # constraints subdomain: 'api' do
+    scope module: 'api' do
+      namespace :v1 do
+        resources :students,only: :show
+        resources :teachers, only: [:index,:destroy]
+      end
+    end
+  # end
 end

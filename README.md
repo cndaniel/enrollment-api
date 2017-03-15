@@ -1,5 +1,5 @@
 # README
-a course registration api with rails 5
+a course registration api with rails 5 with Test Driven Development
 
 
 a TA-reference solution for fullstack job question 2
@@ -20,8 +20,8 @@ a TA-reference solution for fullstack job question 2
 
 ## Installation
 ```
-   $git clone git@github.com:cndaniel/enrollment-api.git
-   $cd enrollment-api
+   $ git clone git@github.com:cndaniel/enrollment-api.git
+   $ cd enrollment-api
 
    $ bundle install
    $ bundle exec rake db:create

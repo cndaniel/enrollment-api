@@ -1,16 +1,14 @@
-class StudentsController < ApplicationController
-  before_action :set_student, only: [:show]
+module API::V1
+  class StudentsController < ApiController
+    before_action :set_student, only: [:show]
 
+    # GET /students/1
+    def show
+      render json: @student, status: 200
+    end
 
+    private
 
-  # GET /students/1
-  def show
-    render json: @student, status: 200
-  end
-
-
-
-  private
     # Use callbacks to share common setup or constraints between actions.
     def set_student
       @student = Student.find(params[:id])
@@ -20,4 +18,5 @@ class StudentsController < ApplicationController
     # def student_params
     #   params.require(:student).permit(:name)
     # end
+  end
 end
